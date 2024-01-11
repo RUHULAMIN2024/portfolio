@@ -1,4 +1,4 @@
-/* common shared styles*/
+/* common css start*/
 body {
     font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
@@ -31,7 +31,9 @@ body {
     font-size: 18px;
 }
 
-/* nav related styles */
+/* common css finish*/
+
+/* nav part start */
 nav {
     display: flex;
     justify-content: space-between;
@@ -60,7 +62,9 @@ nav a {
     color: #474747;
 }
 
-/* header related styles */
+/* nav part finish */
+
+/* header part start */
 .header {
     background-color: #FFF8F3;
     background-image: url('../images/header_bg.png'), url('../images/developer.png');
@@ -96,7 +100,9 @@ nav a {
     margin-bottom: 20px;
 }
 
-/* main section styles */
+/* header part finish */
+
+/* main part start */
 main {
     max-width: 1140px;
     margin: 0 auto;
@@ -106,7 +112,7 @@ main section {
     margin-top: 130px;
 }
 
-/* about section styles */
+/* about part start */
 .about {
     padding: 130px;
     border-radius: 10px;
@@ -122,8 +128,9 @@ main section {
 .about-info {
     text-align: center;
 }
+/* about part finish */
 
-/* skills related styles */
+/* skills part start */
 
 #what-i-do-description {
     padding: 30px 150px;
@@ -146,7 +153,9 @@ main section {
     color: #757575;
 }
 
-/* Resume Section styles */
+/* skills part finish */
+
+/* Resume part start */
 .resume-column-title {
     color: #474747;
     font-size: 30px;
@@ -183,8 +192,9 @@ main section {
     text-align: center;
     margin-top: 50px;
 }
+/* resume part finish */
 
-/* footer style */
+/* footer part start */
 footer {
     display: flex;
     gap: 100px;
@@ -212,4 +222,63 @@ textarea {
     border: 0;
     width: 100%;
 }
+
+/* footer part finish */
+
+/*===============================================
+responsive styles
+=================================================*/
+
+
+@media screen and (max-width:576px) {
+    nav,
+    nav > ul,
+    .banner,
+    .about-info-container,
+    .skills-container, 
+    .resume-container {
+        flex-direction: column;
+    }  
+
+
+    nav > ul{
+        gap: 10px;
+       }
+
+    .banner .profile-pic {
+    width: 100%;
+}
+    .banner,
+    #what-i-do-description {
+    padding: 20px;
+    }
+
+    .btn-primary{
+        margin-bottom: 20px;
+    }
+
+    footer, 
+    .about{
+        padding: 10px;
+        flex-direction: column;
+    }
+    .footer-column {
+    width: 100%;
+    }
+
+    .contact input[type="text"], 
+    .contact input[type="email"],
+    textarea {
+    width: 80%;
+    }
+
+}
+
+@media screen and (min-width:576px) and (max-width:960px) {
+    .btn-primary{
+        margin-bottom: 15px;
+    }
+
+}
+
 
